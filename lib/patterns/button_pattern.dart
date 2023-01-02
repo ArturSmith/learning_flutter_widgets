@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_module6_practice6/patterns/app_colors.dart';
 
 class ButtonPattern extends StatelessWidget {
-  ButtonPattern({super.key, required this.name, this.route});
+  ButtonPattern({super.key, required this.name, required this.route});
   final String name;
-  String? route;
+  final String? route;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,7 +18,7 @@ class ButtonPattern extends StatelessWidget {
           ),
           onPressed: (() {
             if (route != null) {
-              Navigator.pushNamed(context, route!);
+              Navigator.pushNamed(context, '/$route');
             }
           }),
           child: Center(

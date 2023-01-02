@@ -12,7 +12,7 @@ class WidgetDescriptionPagePattern extends StatelessWidget {
   final String title;
   final Widget body;
   final List<Widget> actions;
-  final String information;
+  final Widget information;
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +44,7 @@ class WidgetDescriptionPagePattern extends StatelessWidget {
                           const SizedBox(
                             height: 10,
                           ),
-                          SingleChildScrollView(
-                            child: Text(
-                              information,
-                              textAlign: TextAlign.left,
-                              style: const TextStyle(fontSize: 15),
-                            ),
-                          )
+                          SingleChildScrollView(child: information),
                         ],
                       ),
                     ),

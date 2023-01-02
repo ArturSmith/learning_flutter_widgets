@@ -8,17 +8,27 @@ class ScrollsCategoriesPage extends StatelessWidget {
   List<Widget> listOfButtons = [
     ButtonPattern(
       name: "SingleChildScrollView",
-      route: "/SingleChildSCrollView",
+      route: "SingleChildSCrollView",
     ),
     ButtonPattern(
       name: "ListView",
-      route: "/ListView",
+      route: "ListView",
+    ),
+    ButtonPattern(
+      name: "ListWheelScrollView",
+      route: "ListWheelScrollView",
+    ),
+    ButtonPattern(
+      name: "GridView",
+      route: "GridView",
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return CateroriesPagePattern(
-        title: 'Scrolls', listOfButtons: listOfButtons);
+      title: 'Scrolls',
+      listOFButtons: listOfButtons,
+    );
   }
 }
