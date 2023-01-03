@@ -22,6 +22,10 @@ class ScrollsCategoriesPage extends StatelessWidget {
       name: "GridView",
       route: "GridView",
     ),
+    ButtonPattern(
+      name: "CustomScrollView",
+      route: "CustomScrollView",
+    ),
   ];
 
   @override

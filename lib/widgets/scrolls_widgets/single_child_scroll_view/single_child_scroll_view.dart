@@ -1,53 +1,79 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_module6_practice6/patterns/app_colors.dart';
 import 'package:flutter_module6_practice6/patterns/widget_description_page_pattern.dart';
 
 class SingleChildScrollViewWidget extends StatelessWidget {
   SingleChildScrollViewWidget({super.key});
-  final List<Widget> actions = [];
-  @override
-  Widget build(BuildContext context) {
-    return WidgetDescriptionPagePattern(
-      title: "Single child scroll view",
-      body: SingleChildScrollViewBody(),
-      actions: actions,
-      information: Information().infoBody,
-    );
-  }
-}
+  List<Widget> cards(int count) {
+    List<Widget> cards = [];
 
-class SingleChildScrollViewBody extends StatelessWidget {
-  SingleChildScrollViewBody({super.key});
-
-  // ignore: non_constant_identifier_names, prefer_function_declarations_over_variables
-  final Cards = (int count) => List<Widget>.generate(count, (index) {
-        return Padding(
+    for (var i = 0; i < count; i++) {
+      cards.add(
+        Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
             width: double.infinity,
             height: 30,
             color: const Color.fromARGB(255, 173, 173, 173),
-            child: Center(child: Text('$index')),
+            child: Center(child: Text('$i')),
           ),
-        );
-      });
+        ),
+      );
+    }
+    return cards;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SingleChildScrollView(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          children: Cards(100),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: AppColors().mainColor,
+          title: const Text("SingleChildScrollView"),
+          centerTitle: true,
         ),
+        body: Center(
+          child: SingleChildScrollView(
+              child: Column(
+            children: cards(30),
+          )),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (() {
+            showModalBottomSheet(
+                context: context,
+                builder: ((context) {
+                  return Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        children: [
+                          const Text("Information"),
+                          Container(
+                            height: 1,
+                            width: double.infinity,
+                            color: Colors.black,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          SingleChildScrollView(
+                              child: Information().information),
+                        ],
+                      ),
+                    ),
+                  );
+                }));
+          }),
+          backgroundColor: AppColors().mainColor,
+          child: const Icon(Icons.info),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
 }
 
 class Information {
-  // ignore: prefer_const_literals_to_create_immutables
-  final Widget infoBody = Column(children: [
-    const Text(
-        'Single Child Scroll View принимает один обьект и придает ему свойсто ' +
-            'прокручиваемости если он не вмешается в экран девайса.'),
-  ]);
+  Widget information = const Text("");
 }
