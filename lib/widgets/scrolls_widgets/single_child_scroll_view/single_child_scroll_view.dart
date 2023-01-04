@@ -43,23 +43,26 @@ class SingleChildScrollViewWidget extends StatelessWidget {
             showModalBottomSheet(
                 context: context,
                 builder: ((context) {
-                  return Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Column(
-                        children: [
-                          const Text("Information"),
-                          Container(
-                            height: 1,
-                            width: double.infinity,
-                            color: Colors.black,
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          SingleChildScrollView(
-                              child: Information().information),
-                        ],
+                  return Padding(
+                    padding:  MediaQuery.of(context).viewInsets,
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            const Text("Information"),
+                            Container(
+                              height: 1,
+                              width: double.infinity,
+                              color: Colors.black,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SingleChildScrollView(
+                                child: Information().information),
+                          ],
+                        ),
                       ),
                     ),
                   );
@@ -75,5 +78,13 @@ class SingleChildScrollViewWidget extends StatelessWidget {
 }
 
 class Information {
-  Widget information = const Text("");
+  Widget information = Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      const Text(
+          "Данный виджет принимает в себя один объект и придает ему свойство прокручиваемости если он не вмешается в экран. Можно задать напраление прокрутки горизонтально или вертикально."),
+      Image.asset(
+          "lib/widgets/scrolls_widgets/single_child_scroll_view/assets_of_this_widget/Снимок экрана (285).png"),
+    ],
+  );
 }

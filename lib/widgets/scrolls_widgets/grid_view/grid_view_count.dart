@@ -7,18 +7,18 @@ class GridViewCount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 2, // количество столбцов
-      scrollDirection: Axis.vertical, // направление скролла
-      reverse: false, // скролл с конца
-      // controller,                          // контроллер скролла
+      crossAxisCount: 4, //__________________________________________ количество столбцов
+      scrollDirection: Axis.vertical, //_____________________________ направление скролла
+      reverse: false, //_____________________________________________ скролл с конца
+      // controller,//_______________________________________________ контроллер скрола
       // primary: true,
-      physics: const BouncingScrollPhysics(), // физика скролла
+      physics: const BouncingScrollPhysics(), //_____________________ физика скролла
       // shrinkWrap: true,
-      padding: const EdgeInsets.all(20), // паддинг всего листа
-      mainAxisSpacing: 1, // вертикальные отступы между элементами
-      crossAxisSpacing: 1, // горизонтальные отступы между элементами
-      childAspectRatio: 1, // высота элемента
-      addAutomaticKeepAlives: true, // сохраняет элементы
+      padding: const EdgeInsets.all(20), //__________________________ паддинг всего листа
+      mainAxisSpacing: 1, //_________________________________________ вертикальные отступы между элементами
+      crossAxisSpacing: 1, //________________________________________ горизонтальные отступы между элементами
+      childAspectRatio: 1, //________________________________________ высота элемента
+      addAutomaticKeepAlives: true, //_______________________________ сохраняет элементы
       // addRepaintBoundaries: ,
       // addSemanticIndexes:,
       // cacheExtent,

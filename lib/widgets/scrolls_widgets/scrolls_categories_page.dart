@@ -26,6 +26,10 @@ class ScrollsCategoriesPage extends StatelessWidget {
       name: "CustomScrollView",
       route: "CustomScrollView",
     ),
+    ButtonPattern(
+      name: "ReorderableListView",
+      route: "ReorderableListView",
+    ),
   ];
 
   @override

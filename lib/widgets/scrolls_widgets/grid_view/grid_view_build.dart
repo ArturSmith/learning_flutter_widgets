@@ -9,11 +9,11 @@ class GridViewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount: 3,
           // mainAxisSpacing: 1,
           // crossAxisSpacing: 1,
           // childAspectRatio: 1,
-          mainAxisExtent: 300,
+          mainAxisExtent: 150,
         ),
         itemCount: listOfWidgets.length,
         itemBuilder: ((context, index) {

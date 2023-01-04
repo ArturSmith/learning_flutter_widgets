@@ -38,7 +38,7 @@ class _WidgetDescriptionPagePatternState
     int _bodyLength = widget.bodyWidgetOptions.length;
     int _bottomSheetLength = widget.bottomSheetWidgetOptions.length;
     int _titlesLength = widget.titlesList.length;
-    if (!_bottomBarIsValid) {
+    if (_bottomBarIsValid==false) {
       if (_itemsLength >= 2 &&
           _bodyLength == _itemsLength &&
           _bottomSheetLength == _itemsLength &&

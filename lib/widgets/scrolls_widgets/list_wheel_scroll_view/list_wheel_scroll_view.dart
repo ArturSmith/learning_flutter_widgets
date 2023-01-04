@@ -71,7 +71,7 @@ class ListWheelScrollViewWidget extends StatelessWidget {
 }
 
 class Information {
-  Widget information = const Text("");
+  Widget information = const Text("Данный виджет отображает список прокручиваемых объектов в виде барабана. Можно настраивать деметр барабана, ширину объектовб прозрачность и много другое.");
 }
 
 class ListWheelViewBody extends StatelessWidget {

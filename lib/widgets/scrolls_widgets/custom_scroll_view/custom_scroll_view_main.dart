@@ -13,7 +13,7 @@ class CustomScrollViewWidget extends StatelessWidget {
           _BottomNavigationBarItems().bottomNavigationBarItems,
       bodyWidgetOptions: _BodyWidgetOptions().bodyWidgetOptions,
       bottomSheetWidgetOptions:
-          BottomSheetWidgetOptions().bottomSheetWidgetOptions,
+          _BottomSheetWidgetOptions().list,
       titlesList: _TitlesList().titlesList,
       bodyWhenBottomBarIsNotValid: _BodyWhenBottomBarInNotValid().body,
       informationWhenBottomBarIsNotValid:
@@ -28,20 +28,27 @@ class _Actions {
 }
 
 class _BottomNavigationBarItems {
-  final List<BottomNavigationBarItem> bottomNavigationBarItems = [];
+  final List<BottomNavigationBarItem> bottomNavigationBarItems = [
+    const BottomNavigationBarItem(icon: Icon(Icons.info_outline_rounded), label: "Custom"),
+    // const BottomNavigationBarItem(icon: Icon(Icons.info_outline_rounded), label: "Custom"),
+  ];
 }
 
 class _BodyWidgetOptions {
-  final List<Widget> bodyWidgetOptions = [];
+  final List<Widget> bodyWidgetOptions = [Center(), Center()];
 }
 
-
+class _BottomSheetWidgetOptions {
+  final List<Widget> list = [
+    const Text(''),
+    const Text(''),
+  ];
+}
 
 class _TitlesList {
-  final List<String> titlesList = [];
+  final List<String> titlesList = ['Custom', 'Custom'];
 }
 
 class _BodyWhenBottomBarInNotValid {
-  final Widget body = const Center();
+  final Widget body = Center();
 }
-

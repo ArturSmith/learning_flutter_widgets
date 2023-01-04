@@ -6,10 +6,14 @@ import 'package:flutter_module6_practice6/patterns/text_field_decoration.dart';
 
 class CaterogiesPageModalBottomSheetBody extends StatefulWidget {
   const CaterogiesPageModalBottomSheetBody(
-      {super.key, required this.nameController, required this.routeController});
+      {super.key,
+      required this.nameController,
+      required this.routeController,
+      required this.onPressed});
 
   final TextEditingController nameController;
   final TextEditingController routeController;
+  final void Function() onPressed;
   @override
   State<CaterogiesPageModalBottomSheetBody> createState() =>
       _HomePageModalBottomSheetBodyState();
@@ -35,15 +39,14 @@ class _HomePageModalBottomSheetBodyState
     return Padding(
       padding: MediaQuery.of(context).viewInsets,
       child: Container(
-        height: 250,
+        height: 300,
         width: double.infinity,
         color: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            mainAxisSize: MainAxisSize.min,
+            // mainAxisSize: MainAxisSize.max,
             children: [
-              const Text('Не до конца реализовано'),
               TextField(
                 controller: widget.nameController,
                 autofocus: true,
@@ -61,7 +64,7 @@ class _HomePageModalBottomSheetBodyState
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(AppColors().mainColor)),
-                  onPressed: addCategory,
+                  onPressed: widget.onPressed,
                   child: const Text("Add category"))
             ]),
       ),

@@ -10,6 +10,10 @@ class CateroriesPage extends StatelessWidget {
       name: 'Scrolls',
       route: 'Scrolls',
     ),
+     ButtonPattern(
+      name: 'Layout',
+      route: 'Layout',
+    ),
   ];
   @override
   Widget build(BuildContext context) {

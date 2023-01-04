@@ -16,8 +16,7 @@ class ListViewWidget extends StatelessWidget {
       bottomNavigationBarItems:
           _BottomNavigationBarItems().bottomNavigationBarItems,
       bodyWidgetOptions: _BodyWidgetOptions().bodyWidgetOptions(),
-      bottomSheetWidgetOptions:
-          BottomSheetWidgetOptions().bottomSheetWidgetOptions,
+      bottomSheetWidgetOptions: _BottomSheetWidgetOptions().list,
       titlesList: _TitlesList().titlesList,
       bodyWhenBottomBarIsNotValid: _BodyWhenBottomBarIsNotValid().body,
       informationWhenBottomBarIsNotValid:
@@ -34,11 +33,11 @@ class _Actions {
 class _BottomNavigationBarItems {
   final List<BottomNavigationBarItem> bottomNavigationBarItems = const [
     BottomNavigationBarItem(
-        icon: Icon(Icons.first_page), label: "ListView default"),
+        icon: Icon(Icons.info_outline_rounded), label: "ListView default"),
     BottomNavigationBarItem(
-        icon: Icon(Icons.first_page), label: "ListView builder"),
+        icon: Icon(Icons.info_outline_rounded), label: "ListView builder"),
     BottomNavigationBarItem(
-        icon: Icon(Icons.first_page), label: "ListView sepparated"),
+        icon: Icon(Icons.info_outline_rounded), label: "ListView sepparated"),
   ];
 }
 
@@ -70,6 +69,17 @@ class _BodyWidgetOptions {
     ];
     return _finalList;
   }
+}
+
+class _BottomSheetWidgetOptions {
+  final List<Widget> list = [
+    const Text(
+        'ListView дефолтный конструктор просто принимает массив объектов и придает им свойство прокручиваемости. Рекомендуется применять к небольшим спискам виджетов'),
+    const Text(
+        'ListView.builder рекомендуется использовать для больших или бесконечных списков, его особенность в том что он выгружает только те объекты которые действительно видны на экране и уничтожает другие при прокрутке. Удаление объектов и сохранение их состояния можно контралировать с помощью mixin AutomaticKeepAliveClientMixin (подробнее читать в документации)'),
+    const Text(
+        'ListView.separated работает по тому же принципу что и ListView.builder, но так же позволяет вставлять между объектами основного списка, другой виджет. В данном примере между карточками вставлен виджет Divider()'),
+  ];
 }
 
 class _TitlesList {

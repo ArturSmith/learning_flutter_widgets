@@ -14,7 +14,7 @@ class GridViewExtent extends StatelessWidget {
       // physics: ,
       // shrinkWrap: true,
       // padding: ,
-      maxCrossAxisExtent: 300,
+      maxCrossAxisExtent: 100,
       // mainAxisSpacing: 10,
       // crossAxisSpacing: 10,
       // childAspectRatio: 10,

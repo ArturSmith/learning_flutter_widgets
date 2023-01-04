@@ -4,8 +4,8 @@ import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_count.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_custom.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_extent.dart';
+import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_information.dart';
 
-import '../custom_scroll_view/custom_scroll_view_information.dart';
 
 class GridViewWidget extends StatelessWidget {
   GridViewWidget({super.key});
@@ -17,8 +17,7 @@ class GridViewWidget extends StatelessWidget {
       bottomNavigationBarItems:
           _BottomNavigationBarItems().bottomNavigationBarItems,
       bodyWidgetOptions: _BodyWidgetOptions().bodyWidgetOptions(),
-      bottomSheetWidgetOptions:
-          BottomSheetWidgetOptions().bottomSheetWidgetOptions,
+      bottomSheetWidgetOptions: _BottomSheetWidgetoptions().list,
       titlesList: _TitlesList().titlesList,
       bodyWhenBottomBarIsNotValid: _BodyWhenBottomBarIsNotValid().body,
       informationWhenBottomBarIsNotValid:
@@ -35,13 +34,13 @@ class _Actions {
 class _BottomNavigationBarItems {
   final List<BottomNavigationBarItem> bottomNavigationBarItems = const [
     BottomNavigationBarItem(
-        icon: Icon(Icons.near_me_outlined), label: "GridView count"),
+        icon: Icon(Icons.info_outline_rounded), label: "GridView count"),
     BottomNavigationBarItem(
-        icon: Icon(Icons.near_me_outlined), label: "GridView build"),
+        icon: Icon(Icons.info_outline_rounded), label: "GridView build"),
     BottomNavigationBarItem(
-        icon: Icon(Icons.near_me_outlined), label: "GridView extent"),
+        icon: Icon(Icons.info_outline_rounded), label: "GridView extent"),
     BottomNavigationBarItem(
-        icon: Icon(Icons.near_me_outlined), label: "GridView custom"),
+        icon: Icon(Icons.info_outline_rounded), label: "GridView custom"),
   ];
 }
 
@@ -74,6 +73,15 @@ class _BodyWidgetOptions {
     ];
     return _finalList;
   }
+}
+
+class _BottomSheetWidgetoptions {
+  final List<Widget> list = [
+    const Text('GridView count позволяет задать количество столбцов, в зависимости от их количества будет перестраиваться размер плиток.'),
+    const Text('GridView builder используется для больших или бесконечных списков. Приминает делегат.'),
+    const Text('GridView extent позволяет задать размер плиток, от этого будет зависить количество столбцовю.'),
+    const Text(''),
+  ];
 }
 
 class _TitlesList {
