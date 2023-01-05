@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module6_practice6/patterns/widget_description_page_pattern.dart';
+import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list_view_builder.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list_view_default.dart';
+import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list_view_information.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list_view_separated.dart';
-
-import '../custom_scroll_view/custom_scroll_view_information.dart';
 
 class ListViewWidget extends StatelessWidget {
   ListViewWidget({super.key});
@@ -20,7 +19,7 @@ class ListViewWidget extends StatelessWidget {
       titlesList: _TitlesList().titlesList,
       bodyWhenBottomBarIsNotValid: _BodyWhenBottomBarIsNotValid().body,
       informationWhenBottomBarIsNotValid:
-          InformationWhenBottomBarIsNotValid().information,
+          InformationWhenBottomBarIsNotValidListView().information,
       title: const Text("List view"),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class InformationWhenBottomBarIsNotValid {
-  final Widget informationWhenBottomBarIsNotValid = const Text('Данный виджет позволяет перемешать объекты списка в ручную а атк же прокручивать список.');
+  final Widget informationWhenBottomBarIsNotValid = const Text('Данный виджет позволяет перемешать объекты списка в ручную а так же прокручивать список.');
 }
 
 class BottomSheetWidgetOptions {

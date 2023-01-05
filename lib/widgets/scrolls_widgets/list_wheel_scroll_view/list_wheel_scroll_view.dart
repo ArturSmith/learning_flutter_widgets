@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_module6_practice6/patterns/app_colors.dart';
-import 'package:flutter_module6_practice6/patterns/widget_description_page_pattern.dart';
+import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 
 class ListWheelScrollViewWidget extends StatelessWidget {
   const ListWheelScrollViewWidget({super.key});

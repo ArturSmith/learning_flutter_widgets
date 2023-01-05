@@ -49,12 +49,14 @@ class _CategoriesPageState extends State<CateroriesPagePattern> {
           centerTitle: true,
           title: Text(widget.title),
         ),
+        //=============ТРЕБУЕТ ДОРАБОТКИ======================================================
         // floatingActionButton: FloatingActionButton(
         //   backgroundColor: AppColors().mainColor,
         //   onPressed: addNewCategory,
         //   child: const Icon(Icons.add),
         // ),
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        //===================================================================================
         body: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),

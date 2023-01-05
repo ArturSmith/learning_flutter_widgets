@@ -30,7 +30,8 @@ class WidgetDescriptionPagePattern extends StatefulWidget {
 class _WidgetDescriptionPagePatternState
     extends State<WidgetDescriptionPagePattern> {
   int _selectedIndex = 0;
-  Icon _bottomBarActivationIcon = const Icon(Icons.ads_click);
+  bool _bottomBarVisible = false;
+  String _bottomBarActivationButtonText = 'Info';
   bool _bottomBarIsValid = false;
 
   void _bottomBarActivation() {
@@ -38,23 +39,18 @@ class _WidgetDescriptionPagePatternState
     int _bodyLength = widget.bodyWidgetOptions.length;
     int _bottomSheetLength = widget.bottomSheetWidgetOptions.length;
     int _titlesLength = widget.titlesList.length;
-    if (_bottomBarIsValid==false) {
+
+    if (_bottomBarIsValid == false) {
       if (_itemsLength >= 2 &&
           _bodyLength == _itemsLength &&
           _bottomSheetLength == _itemsLength &&
           _titlesLength == _itemsLength) {
         _bottomBarIsValid = true;
-        _bottomBarActivationIcon = const Icon(
-          Icons.ads_click,
-          color: Colors.red,
-        );
+        _bottomBarActivationButtonText = 'Close info';
       }
     } else {
       _bottomBarIsValid = false;
-      _bottomBarActivationIcon = const Icon(
-        Icons.ads_click,
-        color: Colors.white,
-      );
+      _bottomBarActivationButtonText = 'Info';
     }
     setState(() {});
   }
@@ -62,11 +58,9 @@ class _WidgetDescriptionPagePatternState
   @override
   void initState() {
     super.initState();
-    widget.actions.add(IconButton(
-        onPressed: (() {
-          _bottomBarActivation();
-        }),
-        icon: _bottomBarActivationIcon));
+    if (widget.bottomNavigationBarItems.length >= 2) {
+      _bottomBarVisible = true;
+    }
   }
 
   void _onTap(int index) {
@@ -85,7 +79,17 @@ class _WidgetDescriptionPagePatternState
               ? Text(widget.titlesList[_selectedIndex])
               : widget.title,
           centerTitle: true,
-          actions: widget.actions,
+          actions: [
+            Visibility(
+              visible: _bottomBarVisible,
+              child: TextButton(
+                onPressed: _bottomBarActivation,
+                child: Text(_bottomBarActivationButtonText,
+                    style: const TextStyle(color: Colors.white)),
+              ),
+            ),
+            ...widget.actions
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: AppColors().mainColor,

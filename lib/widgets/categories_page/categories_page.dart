@@ -10,7 +10,7 @@ class CateroriesPage extends StatelessWidget {
       name: 'Scrolls',
       route: 'Scrolls',
     ),
-     ButtonPattern(
+    ButtonPattern(
       name: 'Layout',
       route: 'Layout',
     ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class _InformationWhenBottomBarIsNotValid {
+class InformationWhenBottomBarIsNotValidListView {
   final Widget information = Text("");
 }
 

@@ -30,6 +30,10 @@ class ScrollsCategoriesPage extends StatelessWidget {
       name: "ReorderableListView",
       route: "ReorderableListView",
     ),
+    ButtonPattern(
+      name: "PageView",
+      route: "PageView",
+    ),
   ];
 
   @override

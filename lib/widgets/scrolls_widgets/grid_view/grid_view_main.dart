@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module6_practice6/patterns/widget_description_page_pattern.dart';
+import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_build.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_count.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_custom.dart';
@@ -79,7 +79,7 @@ class _BottomSheetWidgetoptions {
   final List<Widget> list = [
     const Text('GridView count позволяет задать количество столбцов, в зависимости от их количества будет перестраиваться размер плиток.'),
     const Text('GridView builder используется для больших или бесконечных списков. Приминает делегат.'),
-    const Text('GridView extent позволяет задать размер плиток, от этого будет зависить количество столбцовю.'),
+    const Text('GridView extent позволяет задать размер плиток, от этого будет зависить количество столбцов.'),
     const Text(''),
   ];
 }

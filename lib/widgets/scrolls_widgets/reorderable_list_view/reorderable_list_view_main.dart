@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module6_practice6/patterns/widget_description_page_pattern.dart';
+import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/reorderable_list_view/reorderable_list_view_example.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/reorderable_list_view/reorderable_list_view_information.dart';
 

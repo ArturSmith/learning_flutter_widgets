@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module6_practice6/patterns/app_colors.dart';
+import 'package:flutter_module6_practice6/patterns/single_page_pattern.dart';
 
 class LayoutBuilderWidget extends StatelessWidget {
   const LayoutBuilderWidget({super.key});
-
   List<Widget> cards(int count) {
     List<Widget> cards = [];
 
@@ -25,34 +24,27 @@ class LayoutBuilderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-            title: const Text("Layout builder"),
-            centerTitle: true,
-            backgroundColor: AppColors().mainColor),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.info),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        body: LayoutBuilder(
-          builder: (BuildContext, BoxConstraints) {
-            final _constrains = BoxConstraints.maxWidth;
+    return SinglePagePattern(
+      title: const Text('Layout builder'),
+      bottomSheetBody: const Text(
+          "Данный виджет позволяет управлять constrains, с его помощью можно задавать условие изменения constrains и подстраивать под них своё приложение. В данном примере при изменении положении девайся с вертикального на горизонтальное, ListView заменяется на GridView. "),
+      body: LayoutBuilder(
+        builder: (BuildContext, BoxConstraints) {
+          final _constrains = BoxConstraints.maxWidth;
 
-            if (BoxConstraints.maxWidth > 600) {
-              return GridView.count(
-                crossAxisCount: 3,
-                children: cards(100),
-              );
-            } else {
-              return ListView(
-                children: cards(100),
-              );
-            }
-          },
-        ),
+          if (BoxConstraints.maxWidth > 600) {
+            return GridView.count(
+              crossAxisCount: 3,
+              children: cards(100),
+            );
+          } else {
+            return ListView(
+              children: cards(100),
+            );
+          }
+        },
       ),
+      actions: [],
     );
   }
 }
