@@ -1,8 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/single_page_pattern.dart';
 
 class LayoutBuilderWidget extends StatelessWidget {
   const LayoutBuilderWidget({super.key});
+  static const routeName = '/LayoutBuilderWidget';
   List<Widget> cards(int count) {
     List<Widget> cards = [];
 

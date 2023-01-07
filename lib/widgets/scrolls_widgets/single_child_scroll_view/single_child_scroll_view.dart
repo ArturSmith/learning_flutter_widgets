@@ -1,9 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/app_colors.dart';
-import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 
 class SingleChildScrollViewWidget extends StatelessWidget {
   SingleChildScrollViewWidget({super.key});
+
+  static const routeName = 'SingleChildScrollViewWidget';
   List<Widget> cards(int count) {
     List<Widget> cards = [];
 
@@ -44,7 +48,7 @@ class SingleChildScrollViewWidget extends StatelessWidget {
                 context: context,
                 builder: ((context) {
                   return Padding(
-                    padding:  MediaQuery.of(context).viewInsets,
+                    padding: MediaQuery.of(context).viewInsets,
                     child: Center(
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
@@ -83,8 +87,6 @@ class Information {
     children: [
       const Text(
           "Данный виджет принимает в себя один объект и придает ему свойство прокручиваемости если он не вмешается в экран. Можно задать напраление прокрутки горизонтально или вертикально."),
-      Image.asset(
-          "lib/widgets/scrolls_widgets/single_child_scroll_view/assets_of_this_widget/Снимок экрана (285).png"),
     ],
   );
 }

@@ -1,7 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 class InformationWhenBottomBarIsNotValidListView {
-  final Widget information = Text("");
+  final Widget information = const Text("Данный виджет можно реализовать несколькими конструкторами. Смотреть info ");
 }
 
 

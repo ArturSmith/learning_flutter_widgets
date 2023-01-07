@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_module6_practice6/widgets/categories_page/categories_page.dart';
 import 'package:flutter_module6_practice6/widgets/layout_widgets/layout_builder/layout_builder_main.dart';
 import 'package:flutter_module6_practice6/widgets/layout_widgets/layout_widgets_categories_page.dart';

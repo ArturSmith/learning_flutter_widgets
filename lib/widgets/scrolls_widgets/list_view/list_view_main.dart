@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list_view_builder.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list_view_default.dart';
@@ -7,6 +10,7 @@ import 'package:flutter_module6_practice6/widgets/scrolls_widgets/list_view/list
 
 class ListViewWidget extends StatelessWidget {
   ListViewWidget({super.key});
+  static const routeName = '/ListViewWidget';
 
   @override
   Widget build(BuildContext context) {

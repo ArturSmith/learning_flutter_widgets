@@ -1,9 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/app_colors.dart';
 import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 
 class ListWheelScrollViewWidget extends StatelessWidget {
   const ListWheelScrollViewWidget({super.key});
+  static const routeName = '/ListWheelScrollViewWidget';
 
   List<Widget> cards(int count) {
     List<Widget> cards = [];
@@ -71,7 +75,7 @@ class ListWheelScrollViewWidget extends StatelessWidget {
 }
 
 class Information {
-  Widget information = const Text("Данный виджет отображает список прокручиваемых объектов в виде барабана. Можно настраивать деметр барабана, ширину объектовб прозрачность и много другое.");
+  Widget information = const Text("Данный виджет отображает список прокручиваемых объектов в виде барабана. Можно настраивать деметр барабана, ширину объектов, прозрачность и много другое.");
 }
 
 class ListWheelViewBody extends StatelessWidget {

@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/app_colors.dart';
 import 'package:flutter_module6_practice6/patterns/categories_page_modal_bottom_sheet_body_pattern.dart';
 

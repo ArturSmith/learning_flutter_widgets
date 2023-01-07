@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_build.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_count.dart';
@@ -6,9 +9,9 @@ import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_extent.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/grid_view/grid_view_information.dart';
 
-
 class GridViewWidget extends StatelessWidget {
   GridViewWidget({super.key});
+  static const routeName = '/GridViewWidget';
 
   @override
   Widget build(BuildContext context) {

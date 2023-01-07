@@ -1,11 +1,15 @@
+// Flutter imports:
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_module6_practice6/patterns/single_page_pattern.dart';
+
+// Project imports:
 import 'package:flutter_module6_practice6/patterns/multi_page_pattern.dart';
+import 'package:flutter_module6_practice6/patterns/single_page_pattern.dart';
 import 'package:flutter_module6_practice6/widgets/scrolls_widgets/page_view/info_page_view.dart';
 
 class PageViewWidget extends StatelessWidget {
   PageViewWidget({super.key});
+  static const routeName = '/PageViewWidget';
 
   final PageController _pageViewController = PageController(
     viewportFraction: 0.5,
